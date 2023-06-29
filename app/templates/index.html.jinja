@@ -1,0 +1,9 @@
+{% extends 'base.html.jinja' %}
+{% block content %}
+    <div class="intro-page">
+        <h1>Scraper Front End</h1>
+        <form action="{{url_for('opinions')}}" method="post" class="form-opinions">
+        <input type="text" name="productcode" id="productcode" placeholder="Enter Product Code">
+        <input type="submit" value="Enter" class="input">
+    <div>
+{% endblock %}

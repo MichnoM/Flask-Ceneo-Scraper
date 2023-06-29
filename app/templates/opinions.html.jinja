@@ -1,0 +1,26 @@
+{% extends "index.html.jinja" %}
+{% block content %}
+    <div class="opinions-page">
+        <p>Average rating: {{ rating }}</p>
+        <p>Number of opinions: {{ opinions }}</p>
+        <p>Positive opinions: {{ pros }}</p>
+        <p>Negative opinions: {{ cons }}</p>
+
+        <br>
+        <h2>Download Files</h2>
+
+        <div class="button-group">
+            <form action="{{ url_for('json') }}" method="post" class="form-json">
+                <button type="submit" class="btn-json">Download Json</button>
+            </form>
+            <br>
+            <form action="{{ url_for('bar') }}" method="post" class="form-bar">
+                <button type="submit" class="btn-bar">Download Bar Chart</button>
+            </form>
+            <br>
+            <form action="{{ url_for('pie') }}" method="post" class="form-pie">
+            <button type="submit" class="btn-pie">Download Pie Chart</button>
+            </form>
+        </div>
+    </div>  
+{% endblock %}
